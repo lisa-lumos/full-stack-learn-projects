@@ -1,0 +1,28 @@
+body {
+  background-color: #f2fffe;
+  font-family: Arial, Times, serif;
+
+}
+
+hr {
+  border-color: gray;
+  border-style: none;
+  border-top-style: dotted;
+  border-width: 4px;
+  width: 10%;
+}
+
+h1 {
+  color: #66bfbf;
+}
+
+h3 {
+  color: #66bfbf;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+img {
+    border-radius: 25%;
+    width: 120px;
+}
