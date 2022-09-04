@@ -1,7 +1,10 @@
 # Full stack projects during my learning process
 
+## 4. tindog-website
+A static website that uses Bootstrap and Font Awesome, and is mobile friendly. 
+
 ## 3. personal-website
-css and html site, featuring font property, and the box model of website styling. 
+css and html site, featuring font property, and the box model of website styling.
 
 
 ## 2. bacon-fansite
