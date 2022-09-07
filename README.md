@@ -1,7 +1,7 @@
 # Full stack projects
 
 ## Simon Game 🎮
-A website that allow you to plan the game Simon. It uses html, css, javascript and jQuery. 
+A website that allows you to play the game Simon. It uses html, css, javascript and jQuery. 
 
 ## Drum 🥁 Kit
 A website that plays the sound of each musical instrument when you click their images or their corresponding keys on the keyboard. It uses html, css, and javascript, and is mobile friendly.
