@@ -18,14 +18,14 @@ css and html site, featuring font property, and the box model of website styling
 ## 2. bacon-fansite 🥓
 css and html site, featuring css tag, class and id selectors, and the `:hover` selector.
 
-👉[View it here](https://resplendent-hummingbird-42b73b.netlify.app)
+👉 [View it here](https://resplendent-hummingbird-42b73b.netlify.app)
 
 Keywords: `CSS Selectors`, `Tag Selectors`, `Class Selectors`, `ID Selectors`, `Pseudo Classes`
 
 ## 1. personal-website 👩
 A simple, old-fashioned, ugly personal website template written using html.
 
-👉[View it here](https://darling-tulumba-c89dc9.netlify.app/)
+👉 [View it here](https://darling-tulumba-c89dc9.netlify.app/)
 
 Keywords: `HTML`, `HTML Tag`, `HTML Attributes`, `HTML Lists`, `HTML Links`. `HTML Image`, `HTML Forms`, `CSS`, `Inline CSS`, `Internal CSS`, `External CSS`
 
