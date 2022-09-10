@@ -49,7 +49,7 @@ Because class and id selectors are more specific than tag selectors, so they can
 
 An html element could have more than one class, but only one id. For example, in the html file you have `<img class="bacon round" src="https://emojipedia-us.s3.amazonaws.com/thumbs/240/apple/271/bacon_1f953.png" alt="bacon-img">`, which means you have both "bacon" class and "round" class applied to this img tag. And in css you have `round { border-radius: 100%; }`
 
-### Pseudo class
+### Pseudo Classes
 HTML elements can have different states, e.g.: when you `hover` over an image or piece of text. You can change the state of the element by using the pseudo classes that have a colon : in front of them. 
 
 To make the image have a gold color when you hover over it, in the css file, add:
