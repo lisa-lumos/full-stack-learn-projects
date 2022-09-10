@@ -1,4 +1,4 @@
-/************************** tag selectors **************************/
+/*------------------------- tag selectors -------------------------*/
 body {
   background-color: gold;
 }
@@ -25,7 +25,7 @@ img:hover {
   background-color: rgba(212, 56, 56, 0.8);
 }
 
-/************************** class selectors **************************/
+/*------------------------- class selectors -------------------------*/
 .bacon {
   border-color: red;
 }
@@ -33,7 +33,7 @@ img:hover {
   border-color: green;
 }
 
-/************************** id selectors **************************/
+/*------------------------- id selectors -------------------------*/
 /* to target an id, can use only once */
 #different-paragraph {
   color: white;
