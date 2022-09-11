@@ -30,7 +30,7 @@ Keywords: `CSS Selectors`, `Tag Selectors`, `Class Selectors`, `ID Selectors`, `
 ## 1. personal-website
 A simple, old-fashioned, ugly personal website template written using only HTML.
 
-👉 [View it here](https://darling-tulumba-c89dc9.netlify.app/)
+👉 [View it here](https://lustrous-bubblegum-c80188.netlify.app)
 
 Keywords: `HTML`, `HTML Tag`, `HTML Attributes`, `HTML Lists`, `HTML Links`. `HTML Image`, `HTML Forms`, `CSS`, `Inline CSS`, `Internal CSS`, `External CSS`
 
