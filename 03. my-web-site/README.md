@@ -129,6 +129,13 @@ Using dynamic font size makes your website accessible to everyone, like to users
 
 Note that if we use `em` or `percentages`, then the font size is inherited. If in your `body`, you specify font-size is `2em`, then in `h1`, font-size is `2em`, then the actual size of `h1` becomes `4em`. In `CSS3`, there is `rem`, which is root em, means ignore the inherits, makes it less error-prone. 
 
+### Floating
+If we want the text to wrap around a image, need to change the `float` property of the image tag: `float: left; ` - this makes the image to be on the left and the text to sit on the right of the image. 
+
+Float is one of the most commonly used and abused css properties. It has a lot of corner cases. It is only recommended to use for wrapping text, not other things. 
+
+### Clear
+If use `clear: left; ` on part of the text from prevoius step, then this part of the text will not wrap the image, instead, it will sit below the image. 
 
 
 

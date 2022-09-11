@@ -15,9 +15,9 @@ A static website that uses Bootstrap and Font Awesome, and is mobile friendly.
 ## 3. my-web-site
 Site created using intermediate CSS.
 
-👉 [View it here]()
+👉 [View it here](https://fantastic-baklava-dfd31e.netlify.app/)
 
-Keywords: 
+Keywords: `The box model`, `CSS Display property`, `CSS Position property`, `Font styling in CSS`, `CSS float property`
 
 
 ## 2. bacon-fansite
