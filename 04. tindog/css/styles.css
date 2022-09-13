@@ -183,3 +183,12 @@ em {
     margin: 5% 5%;
   }
 }
+
+.card-footer {
+    background-color: white;
+    border: none;
+}
+
+.card-body {
+    height: 220px;
+}
