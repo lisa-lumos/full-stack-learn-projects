@@ -102,6 +102,112 @@ The default `z-index` for all elements is 0. The elements with same z-index show
 
 z-index only works if the elements have a `position` property defined as `absolute` or `relative`, or `fixed`. It won't work if the `position` is `static`. 
 
+## Media Query Breakpoints
+Google rankings are affected by whether a website is mobile-friendly or not. You can check whether your website is mobile-friendly by `Mobile-Friendly Test` by Google. To solve this problem, some people will make a separate mobile site, which is a lot of work. The second solution is to make your website `responsive`. 
+
+For example, you have a `<h1>Hello World</h1>` as a website, if you want the color of `h1` to be red only when the page is printed, in css, you can have 
+```
+@media print{
+    h1 {
+        color: red;
+    }
+}
+```
+
+Similarly, if the screen width is larger than 900px, the changes inside the media will be activated: 
+```
+h1 {
+    font-size: 30px;
+}
+@media screen (min-width: 900px) {
+    // change something, like
+    h1 {
+        font-size: 60px;
+    }
+}
+```
+If the screen width is larger than 900px and smaller than 1000px, the changes inside the media will be activated: 
+```
+h1 {
+    font-size: 30px;
+}
+@media screen (min-width: 900px) and (max-width: 1000px){
+    // change something, like
+    h1 {
+        font-size: 60px;
+    }
+}
+```
+For fine-tuning, you will be using css media queries a lot. 
+
+To direct the anchor tag to the `footer` that has an id named "footer" `<a class="nav-link" href="#footer">Contact</a>`. In URL, this is equivalent of appending "#footer" to the end of original URL. 
+
+## Code Refactoring
+1. Readability
+2. Modularity
+3. Efficiency
+4. Length
+
+## Combining Selectors in CSS
+You can target a few selectors at once: 
+```
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+```
+aka
+```
+selector1, selector2 {
+    ...
+}
+```
+
+Hierarchical selectors: to target the ".container-fluid" class inside the the tag that has an id of "title": 
+```
+#title .container-fluid {
+  padding: 3% 15% 10%;
+}
+```
+aka
+```
+selector1 selector2 {
+    ...
+}
+```
+where selector1 is belongs to parent and selector2 belongs to the child. It is going to look for all the selector2s that is contained in a selector 1, and apply the style. 
+
+Combined selectors: 
+```
+h1#title {
+    color: red;
+    // the h1 which has an id of "title" will be colored red
+}
+```
+aka
+```
+selector1.selector2 {
+    ...
+}
+selector1#selector2 {
+    ...
+}
+```
+
+## Selector Priority
+`id selectors` > `class selectors` > `tag selectors`
+
+Inside the one selector, the last row wins. 
+
+Use ids very sparringly. Try to be specifit and try to apply one one class to html elements. 
+
+
+
 
 
 
