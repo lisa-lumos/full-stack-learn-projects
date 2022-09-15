@@ -1,10 +1,20 @@
 # Full stack projects
+Note: projects are orderd reversely to showcase the complex projects first. 
+
+## 8. 
 
 ## 7. Simon Game 
 A website that allows you to play the game Simon. It uses HTML, CSS, JavaScript and jQuery. 
 
+👉 [View it here](https://guileless-narwhal-6db72c.netlify.app)
+
+Keywords: `jQuery`, `Website Animations with jQuery`
+
+Please wait for the `GIF` to load...
+<img src="07. simon/animation.gif">
+
 ## 6. Drum Kit
-A website that plays the sound of each musical instrument when you click their images or their corresponding keys on the keyboard. It uses HTML, CSS, and JavaScript, and is mobile- friendly.
+A website that plays the sound of each musical instrument when you click their images or their corresponding keys on the keyboard. It uses HTML, CSS, and JavaScript, and is mobile-friendly.
 
 👉 [View it here](https://celebrated-frangipane-ff2595.netlify.app/)
 
