@@ -1,7 +1,18 @@
 # Full stack projects
 Note: projects are orderd reversely to showcase the complex projects first. 
 
-## 8. 
+## 8. Servers
+This folder contains a calculator server, a simple weather app that pulls data via weather API, and  newsletter subscription page that uses Mailchimp API to store subscriber data. 
+
+👉 [View it here](https://evening-dawn-05331.herokuapp.com/)
+
+Keywords: `Node.js`, `Express`, `API`, `NPM`, `Server`, `JSON`, `Mailchimp`, `Heroku`, `Bootstrap`
+
+Please wait for the `GIF` to load...
+<img src="08. servers/calculator/animation.gif">
+<img src="08. servers/weather/animation.gif">
+<img src="08. servers/newsletter/animation.gif">
+
 
 ## 7. Simon Game 
 A website that allows you to play the game Simon. It uses HTML, CSS, JavaScript and jQuery. 
