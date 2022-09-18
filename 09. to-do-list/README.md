@@ -120,7 +120,7 @@ const requestedTitle = _.lowCase(req.params.postName);
 ## MongoDB
 Go to 'https://www.mongodb.com/', and register. Creat a free cluster and create log in info, and add your ip to whitelist. In terminal, `brew install mongosh`, then `mongosh "mongodb+srv://[yourServerName].mongodb.net/cluster0" --apiVersion 1 --username [yourUserName]`, and enter password. 
 
-You can also download and install `MongoDB Community Server` to run MongoDB locally.  
+You can also download and install `MongoDB Community Server` to run MongoDB locally. `https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-os-x/`. 
 
 ## MongoDB CRUD Operations
 Inside Mongo Shell, type `help` to see list of commands. Commonly used commands:
@@ -271,6 +271,34 @@ Fruit.deleteOne({name: "Peach"}, function(err) {
     }
 });
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -4,12 +4,10 @@ Note: projects are orderd reversely to display the complex projects first.
 ## 9. To Do List
 This is a to do list that has a MongoDB database in the backend. 
 
-👉 [View it here]()
-
-Keywords: 
+Keywords: `EJS`, `MongoDB`, `Mongoose`
 
 Please wait for the `GIF` to load...
-<img src="">
+<img src="09. to-do-list/to-do-list-v2/animation.gif">
 
 
 ## 8. Servers
