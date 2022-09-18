@@ -1,6 +1,14 @@
 # Full stack projects
 Note: projects are orderd reversely to display the complex projects first. 
 
+## 10. Wiki API
+This API allows for the RESTful API calls. It connects to a MongoDB database to store pages of the wiki, and takes get, post, delete, put and patch API calls. 
+
+Keywords: `RESTful API`, `MongoDB`, `Mongoose`
+
+Please wait for the `GIF` to load...
+<img src="10. wiki-api/animation.gif">
+
 ## 9. To Do List
 This is a to do list that has a MongoDB database in the backend. 
 
@@ -8,7 +16,6 @@ Keywords: `EJS`, `MongoDB`, `Mongoose`
 
 Please wait for the `GIF` to load...
 <img src="09. to-do-list/to-do-list-v2/animation.gif">
-
 
 ## 8. Servers
 This folder contains a calculator server, a simple weather app that pulls data via weather API, and  newsletter subscription page that uses Mailchimp API to store subscriber data. 
