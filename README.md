@@ -1,5 +1,16 @@
 # Full stack projects
-Note: projects are orderd reversely to showcase the complex projects first. 
+Note: projects are orderd reversely to display the complex projects first. 
+
+## 9. To Do List
+This is a to do list that has a MongoDB database in the backend. 
+
+👉 [View it here]()
+
+Keywords: 
+
+Please wait for the `GIF` to load...
+<img src="">
+
 
 ## 8. Servers
 This folder contains a calculator server, a simple weather app that pulls data via weather API, and  newsletter subscription page that uses Mailchimp API to store subscriber data. 
@@ -12,7 +23,6 @@ Please wait for the `GIF` to load...
 <img src="08. servers/calculator/animation.gif">
 <img src="08. servers/weather/animation.gif">
 <img src="08. servers/newsletter/animation.gif">
-
 
 ## 7. Simon Game 
 A website that allows you to play the game Simon. It uses HTML, CSS, JavaScript and jQuery. 
