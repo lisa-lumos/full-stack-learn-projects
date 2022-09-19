@@ -1,6 +1,13 @@
 # Full stack projects
 Note: projects are orderd reversely to display the complex projects first. 
 
+## 11. Login page
+This application explores different levels of authentication and security measures for user to login, including username and password, encryption, hashing, hashing and salting, cookies and sessions, and OAuth 2.0 to signin with Google. 
+
+Keywords: `Encryption`, `dotenv`, `Hashing`, `Hashing and salting`, `cookies`, `sessions`, `OAuth 2.0`, `Sign In with Google`
+
+<img src="11. secrets/screnshot.png">
+
 ## 10. Wiki API
 This API allows for the RESTful API calls. It connects to a MongoDB database to store pages of the wiki, and takes get, post, delete, put and patch API calls. 
 
