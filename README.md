@@ -1,7 +1,15 @@
 # Full stack projects
 Note: projects are orderd reversely to display the complex projects first. 
 
-## 11. Login page
+## 12. Keeper App
+This is a note taking app that is created using React.
+
+Keywords: `React` 
+
+Please wait for the `GIF` to load...
+<img src="12. keeper-app/animation.gif">
+
+## 11. Login Page
 This application explores different levels of authentication and security measures for user to login, including username and password, encryption, hashing, hashing and salting, cookies and sessions, and OAuth 2.0 to signin with Google. 
 
 Keywords: `Encryption`, `dotenv`, `Hashing`, `Hashing and salting`, `cookies`, `sessions`, `OAuth 2.0`, `Sign In with Google`
