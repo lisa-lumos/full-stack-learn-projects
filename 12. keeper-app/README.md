@@ -500,31 +500,66 @@ function App() {
 export default App;
 ```
 
+## Map, Filter, Reduce, find, findIndex
+`map`: take each elem in the input array, do the same thing to each element, and return the result array:
+```
+var numbers = [3, 56, 2, 48, 5];
 
+// way 1
+function double(x) {
+  return x * 2;
+}
+const newNumbers = numbers.map(double);
 
+// way 2
+const newNumbers = numbers.map(function (x) {
+  return x * 2;
+});
 
+console.log(newNumbers);
+```
 
+`filter`: create a new array by keeping the elems that return true:
+```
+// returns an array of elems that are < 10
+const newNumbers = numbers.filter(function(num) {
+  return num < 10;
+});
+```
 
+`reduce`: accumulate (sum up to) a value by doing something to each item in the array:
+```
+// return the sum of all elems
+var newNumber = numbers.reduce(function (accumulator, curVal) {
+    return accumulator + curVal;
+})
+```
 
+`find`: find the first item that matches from an array:
+```
+const newNumber = numbers.find(function (num) {
+  return num > 10;
+})
+```
 
+`findIndex`: find the index of the first item that matches:
+```
+const newNumber = numbers.findIndex(function (num) {
+  return num > 10;
+})
+```
 
+## Javascript ES6 Arrow functions (the fact arrow)
+```
+var numbers = [3, 56, 2, 48, 5];
+const newNumbers = numbers.map((x, y) => {return x * y});
+const newNumbers = numbers.map(x => {return x * x});
+const newNumbers = numbers.map(x => x * x);
+```
 
+It is a best practice in React include a set of curly braces when you return a component that has many different properties. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+For more info, refer to `https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/`. 
 
 
 
