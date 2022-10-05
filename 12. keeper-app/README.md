@@ -561,6 +561,45 @@ It is a best practice in React include a set of curly braces when you return a c
 
 For more info, refer to `https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/`. 
 
+## React Conditional Rendering with Ternary Operator and AND Operator
+if else statement can be converted into an expression in JS, like `condition ? do if true : do if false`. If no need to do anything on one side of ":", could set it as null. 
+```
+import React from "react";
+import Login from "./Login";
+
+var isLoggedIn = false;
+const currentTime = new Date(2019, 11, 1, 9).getHours();
+
+function App() {
+  return (
+    <div className="container">
+      {isLoggedIn ? <h1>Hello</h1> : <Login />}
+      {currentTime > 12 && <h1>Why are you still working?</h1>}
+    </div>
+  );
+}
+
+export default App;
+```
+The second row in above code checks if current time is larger than 12, if so, then it goes ahead and evaluates the <h1>, otherwise, the <h1> is not evaluated, so not displayed. 
+
+## State in React
+To make the app reactive, `UI = f(State)`. This is declarative programming. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
