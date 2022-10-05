@@ -584,7 +584,73 @@ export default App;
 The second row in above code checks if current time is larger than 12, if so, then it goes ahead and evaluates the <h1>, otherwise, the <h1> is not evaluated, so not displayed. 
 
 ## State in React
-To make the app reactive, `UI = f(State)`. This is declarative programming. 
+To make the app interactive and have changeable state, `UI = f(State)`. This is declarative programming. For example, if we want a number to increase everytime a button is clicked, having `<button onClick={increase}> click me </button>` will not change what is displayed on screen, an walkaround could be to re-render the whole website, but this is uneffective and wasteful. Hooks come to rescue - could create a function that contains a hook.  
+```
+import React, {useState} from "react"
+function App() {
+    const x = useState(123); // 123 is initial val of state
+    console.log(x[0]); // will display 123
+    return (
+        <div className = "container">
+            <h1>{x[0]}</h1>   {// this will change x on the page automatically}
+        </div>
+    )
+}
+```
+If we destructure an array:
+```
+const [red, green, blue] = [9, 132, 227]; // example of destructuring
+```
+
+```
+import React, {useState} from "react"
+function App() {
+    const [count, setCount] = useState(0); // 0 is initial val of state
+    console.log(count); // will display 0
+    
+    function increase() {
+        setCount(count + 1);
+    }
+    
+    return (
+        <div className = "container">
+            <h1>{count}</h1>   {// this will change x on the page automatically}
+            <button onClick={increase}>+<button>
+        </div>
+    )
+}
+```
+More on destructuring:
+- Use `const [name1, name2] = arrayToDestruct` to destructure an array, you can name each elem inside the array as you want
+- Use `const {key1, key2} = objectToDestruct` to destructure an object, note that you cannot name each property as you want in key1 and key2, etc - they have to match exactly with the properties in the object. To take a field out of object and give it a different name, you have to use `const {key1: name1YouChoose, key2: name2YouChoose} = objectToDestruct`, this is useful to give a different name of a field of an object that you obtained from the web, such as public APIs. 
+- To provide a default value for a undefined property in an object, `const {key1 = "defaultValYouChoose", key2} = objectToDestruct`. Using default values can make code robust. 
+- To destructure an object inside an object, use `const {key1, key2, key3: {nestedKey1, nestedKey2}} = object`
+- You do not need to destructure all the keys and vals in an object.
+- What you destruct can also contain function names as elems. 
+
+## Event Handling in React
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
