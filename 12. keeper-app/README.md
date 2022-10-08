@@ -629,24 +629,153 @@ More on destructuring:
 - What you destruct can also contain function names as elems. 
 
 ## Event Handling in React
+To learn more about HTML event attributes: `https://www.w3schools.com/html/html_attributes.asp`. 
 
+To make the h1 change after we click the "Submit" button, and to allow the button to change color when we hover over it: 
+```
+import React, {useState} from "react";
 
+function App() {
+  const [headingText, setHeadingText] = useState("Hello");
+  const [isMousedOver, setMouseOver] = useState(false);
 
+  function handleClick() {
+    setHeadingText("Submitted");
+  }
 
+  function handleMouseOver() {
+    setMouseOver(true);
+  }
 
+  function handleMouseOut() {
+    setMouseOver(false);
+  }
 
+  return (
+    <div className="container">
+      <h1>{headingText}</h1>
+      <input type="text" placeholder="What's your name?" />
+      <button
+        style={{ backgroundColor: isMousedOver ? "black" : "white" }}
+        onClick={handleClick}
+        onMouseOver={handleMouseOver}
+        onMouseOut={handleMouseOut}
+      >
+        Submit
+      </button>
+    </div>
+  );
+}
 
+export default App;
+```
 
+## React Forms
+To display what is typed in input in h1, this is called a controlled component `https://reactjs.org/docs/forms.html#controlled-components` - we have to set the value that comes out of state as the value attributes of our inputs, to keep a single source of truth: 
+```
+import React, { useState } from "react";
 
+function App() {
+  const [name, setName] = useState("");
 
+  function handleChange(event) {
+    console.log(event.target.value);
+    setName(event.target.value);
+  }
 
+  return (
+    <div className="container">
+      <h1>Hello {name}</h1>
+      <input
+        onChange={handleChange}
+        type="text"
+        placeholder="What's your name?"
+        value={name} {// for  single source of truth}
+      />
+      <button>Submit</button>
+    </div>
+  );
+}
 
+export default App;
+```
 
+To add the full name to h1 after user click the submit button: 
+```
+import React, { useState } from "react";
 
+function App() {
+  const [name, setName] = useState("");
+  const [fullName, setFullName] = useState("");
 
+  function handleChange(event) {
+    console.log(event.target.value);
+    setName(event.target.value);
+  }
 
+  function submitted() {
+    setFullName(name);
+  }
 
+  return (
+    <div className="container">
+      <h1>Hello {fullName}</h1>
+      <input
+        onChange={handleChange}
+        type="text"
+        placeholder="What's your name?"
+        value={name} 
+      />
+      <button onClick={submitted}>Submit</button>
+    </div>
+  );
+}
 
+export default App;
+```
+
+To do it inside a form component. The default behaviour of a form component is to refresh the page to submit or make a post/get request, so you need to modify the form's onsubmit atrribute, by adding `event.preventDefault();` to prevent the default behaviour to happen:
+```
+import React, { useState } from "react";
+
+function App() {
+  const [name, setName] = useState("");
+  const [fullName, setFullName] = useState("")
+
+  function handleChange(event) {
+    console.log(event.target.value);
+    setName(event.target.value);
+  }
+
+  function submitted(event) { // need to catch the event
+    setFullName(name);
+    event.preventDefault();
+  }
+
+  return (
+    <div className="container">
+      <h1>Hello {fullName}</h1>
+      <form onSubmit={submitted}>
+      <input
+        onChange={handleChange}
+        type="text"
+        placeholder="What's your name?"
+        value={name} 
+      />
+      <button type="submit" onClick={submitted}>Submit</button>
+      </form>
+    </div>
+  );
+}
+
+export default App;
+
+```
+
+## Class Components VS Functional Components
+There used to be two ways of adding state into a react app. One way is by using functional components, like what we have done by far. But there's another way by using class, as it was required in order to have state at that time. `https://reactjs.org/docs/hooks-intro.html`. React recommends that you should start using hooks to write new code, because it is a much easier way of managing state, and easy to read. 
+
+## Changing Commplex State
 
 
 
