@@ -310,7 +310,7 @@ ReactDOM.render(
   document.getElementById("root")
 );
 ```
-Note that you cannot add `className` as html attribute into customized elements, you can only add it to original html components. Because it will think this `className` is a customized property name. Note that if we need to pass javascript objects in props inside ReactDOM.render(), need to use curly braces such as {object.attribute}. 
+Note that you cannot add `className` as html attribute into customized elements, you can only add it to original html components. Because it will think this `className` is a customized property name. Note that if we need to pass javascript objects in props inside ReactDOM.render(), need to use curly braces such as {object.attribute}. Note that props are read-only. 
 
 ## More Moduler code, and React DevTools
 In index.js:
@@ -775,15 +775,213 @@ export default App;
 ## Class Components VS Functional Components
 There used to be two ways of adding state into a react app. One way is by using functional components, like what we have done by far. But there's another way by using class, as it was required in order to have state at that time. `https://reactjs.org/docs/hooks-intro.html`. React recommends that you should start using hooks to write new code, because it is a much easier way of managing state, and easy to read. 
 
-## Changing Commplex State
+## Changing Commplex State (objects)
+Note, avoid to tap into anything related to event inside the stateful setter, otherwise will get error: "synthetic event is resused". 
+```
+import React, { useState } from "react";
 
+function App() {
+  const [fullName, setFullName] = useState({
+    fName: "",
+    lName: ""
+  });
 
+  function handleChange(event) {
+    const { value, name } = event.target;
 
+    setFullName(prevValue => {
+      if (name === "fName") {
+        return {
+          fName: value,
+          lName: prevValue.lName
+        };
+      } else if (name === "lName") {
+        return {
+          fName: prevValue.fName,
+          lname: value
+        };
+      }
+    });
+  }
 
+  return (
+    <div className="container">
+      <h1>
+        Hello {fullName.fName} {fullName.lName}
+      </h1>
+      <form>
+        <input
+          name="fName"
+          onChange={handleChange}
+          placeholder="First Name"
+          value={fullName.fName}
+        />
+        <input
+          name="lName"
+          onChange={handleChange}
+          placeholder="Last Name"
+          value={fullName.lName}
+        />
+        <button>Submit</button>
+      </form>
+    </div>
+  );
+}
 
+export default App;
+```
 
+## JavaScript ES6 Spread Operator
+```
+const citrus = ["Lime", "Lemon", "Orange"];
+const fruits = ["Apple", "Banana", "Coconut", ...citrus]; // append elems to it
+const fruits = ["Apple", ...citrus, "Banana", "Coconut"]; // insert elems into it
 
+const fullName = {
+    fName: "lisa",
+    lName: "lumos"
+};
+const user = {
+    ...fullName, // insert key-val pairs in a object, into a new object
+    id: 1,
+    username: "lisa-lumos"
+}
+```
+Using the spread operator, the code in the prev section can be simplified as: 
+```
+import React, { useState } from "react";
 
+function App() {
+  const [contact, setContact] = useState({
+    fName: "",
+    lName: "",
+    email: ""
+  });
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+
+    setContact(prevValue => {
+      return {
+        ...prevValue,
+        [name]: value
+      };
+    });
+  }
+
+  return (
+    <div className="container">
+      <h1>
+        Hello {contact.fName} {contact.lName}
+      </h1>
+      <p>{contact.email}</p>
+      <form>
+        <input
+          onChange={handleChange}
+          name="fName"
+          value={contact.fName}
+          placeholder="First Name"
+        />
+        <input
+          onChange={handleChange}
+          name="lName"
+          value={contact.lName}
+          placeholder="Last Name"
+        />
+        <input
+          onChange={handleChange}
+          name="email"
+          value={contact.email}
+          placeholder="Email"
+        />
+        <button>Submit</button>
+      </form>
+    </div>
+  );
+}
+
+export default App;
+
+```
+
+## Manage a Component Tree
+In App.jsx:
+```
+import React, { useState } from "react";
+import ToDoItem from "./ToDoItem";
+
+function App() {
+  const [inputText, setInputText] = useState("");
+  const [items, setItems] = useState([]);
+
+  function handleChange(event) {
+    const newValue = event.target.value;
+    setInputText(newValue);
+  }
+
+  function addItem() {
+    setItems(prevItems => {
+      return [...prevItems, inputText];
+    });
+    setInputText("");
+  }
+
+  function deleteItem(id) {
+    setItems(prevItems => {
+      return prevItems.filter((item, index) => {
+        return index !== id;
+      });
+    });
+  }
+
+  return (
+    <div className="container">
+      <div className="heading">
+        <h1>To-Do List</h1>
+      </div>
+      <div className="form">
+        <input onChange={handleChange} type="text" value={inputText} />
+        <button onClick={addItem}>
+          <span>Add</span>
+        </button>
+      </div>
+      <div>
+        <ul>
+          {items.map((todoItem, index) => (
+            <ToDoItem
+              key={index}
+              id={index}
+              text={todoItem}
+              onChecked={deleteItem}
+            />
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+export default App;
+```
+
+In ToDoItem.jsx:
+```
+import React from "react";
+
+function ToDoItem(props) {
+  return (
+    <div
+      onClick={() => {
+        props.onChecked(props.id);
+      }}
+    >
+      <li>{props.text}</li>
+    </div>
+  );
+}
+
+export default ToDoItem;
+```
 
 
 
