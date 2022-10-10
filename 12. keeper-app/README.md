@@ -769,7 +769,6 @@ function App() {
 }
 
 export default App;
-
 ```
 
 ## Class Components VS Functional Components

@@ -4,7 +4,7 @@ Note: projects are orderd reversely to display the complex projects first.
 ## 12. Keeper App
 This is a note taking app that is created using React.
 
-Keywords: `React` 
+Keywords: `React`, `Babel`, `React Props`, `React DevTools`, `states`, `hooks`, `React component tree`
 
 Please wait for the `GIF` to load...
 <img src="12. keeper-app/animation.gif">
